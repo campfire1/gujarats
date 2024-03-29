@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GUJARATS.RU BEST CHEAT PROVIDER 2017</title>
+<title>GUJARATS.RU</title>
 <style>
   body {
     display: flex;
@@ -11,15 +11,33 @@
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #f0f0f0; /* Default background color */
+    color: #333; /* Default text color */
   }
 
   .test {
     font-size: 48px;
     font-weight: bold;
   }
+
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #333; /* Dark background color */
+    color: #f0f0f0; /* Dark text color */
+  }
 </style>
 </head>
 <body>
-  <div class="test">NUPID STIGGER</div>
+  <div class="test">NUPID STIGGERS</div>
+
+  <!-- Dark mode toggle button -->
+  <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
