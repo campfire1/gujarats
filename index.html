@@ -25,13 +25,20 @@
     background-color: #333; /* Dark background color */
     color: #f0f0f0; /* Dark text color */
   }
+
+  /* Dark mode button styles */
+  .dark-mode-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 </style>
 </head>
 <body>
   <div class="test">NUPID STIGGERS</div>
 
   <!-- Dark mode toggle button -->
-  <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <button class="dark-mode-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
   <script>
     function toggleDarkMode() {
