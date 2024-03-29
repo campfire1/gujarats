@@ -101,17 +101,32 @@
 </head>
 <body>
 
-    <input type="checkbox" id="toggle">
+    <input type="checkbox" id="toggle" onchange="changeText()">
 
     <!-- Container -->
     <div class="container">
-       <div class="test">NUPID STIGGERS</div>
+       <div class="test" id="middletext">GUJARAT</div>
     </div>
 
   <!-- Dark mode toggle button -->
   
 
   <script>
+    function changeText() {
+  // Select the div element
+  var divElement = document.getElementById("middletext");
+  // Select the checkbox
+  var checkbox = document.getElementById("toggle");
+  
+  // Check if the checkbox is checked
+  if (checkbox.checked) {
+    // Change the text if the checkbox is checked
+    divElement.textContent = "RUJAGAT";
+  } else {
+    // Revert to the original text if the checkbox is unchecked
+    divElement.textContent = "GUJARAT";
+  }
+}
     function toggleDarkMode() {
       const body = document.body;
       body.classList.toggle('dark-mode');
