@@ -5,6 +5,66 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GUJARATS.RU</title>
 <style>
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Container for all the elements */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  background-color: #EEE;
+  color: #333;
+  transition: all 0.4s ease-out;
+}
+#toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #333;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Making a dot switch inside the Toggle Button */
+#toggle::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #EEE;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  transition: all 0.5s ease-in;
+}
+
+/* Changing toggle button background when checked */
+#toggle:checked {
+  background: #03FFC0;
+}
+
+/* Changing dot switch color and moving to the right side when checked */
+#toggle:checked::before {
+  background: #333;
+  left: 32px;
+}
+#toggle:checked ~ .container {
+  background-color: #333;
+  color: #EEE;
+}
   body {
     display: flex;
     justify-content: center;
@@ -35,6 +95,14 @@
 </style>
 </head>
 <body>
+
+    <input type="checkbox" id="toggle">
+
+    <!-- Container -->
+    <div class="container">
+       Make sure to include all your content inside this container div.
+    </div>
+
   <div class="test">NUPID STIGGERS</div>
 
   <!-- Dark mode toggle button -->
